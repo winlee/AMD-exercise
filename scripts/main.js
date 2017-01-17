@@ -31,9 +31,9 @@ require.config({
 	}
 })
 
-require(['jquery','text!review.txt','text!../template/test1.html'], function($,template1,temp2){
+require(['jquery','text!review.txt','text!../template/template1.html'], function($,review,template1){
 	debugger;
 	console.log('hh');
-	$(".page").html(template1);
-	$(".page").append(temp2);
+	$(".page").html(review);
+	$(".page").append(template1);
 })
