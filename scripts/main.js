@@ -27,13 +27,15 @@ require.config({
 	baseUrl:"scripts",
 	paths:{
 		jquery:"lib/jquery.min",
-		text:"lib/text",
+		text:"lib/text"
 	}
-})
+});
 
-require(['jquery','text!review.txt','text!../template/template1.html'], function($,review,template1){
+require(['jquery','text!review.txt','text!../template/template1.html','math'], function($,review,template1,math){
 	debugger;
 	console.log('hh');
-	$(".page").html(review);
-	$(".page").append(template1);
-})
+    var page = $(".page");
+	page.html(review);
+	page.append(template1);
+	math.showMainAttr();
+});
